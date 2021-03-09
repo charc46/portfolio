@@ -6,12 +6,19 @@ github: 'https://github.com/charc46/rails-mister-cocktail'
 tagline: 'Mr Cocktails World is a Rails app that allows you to add your favourite cocktail to the list.'
 ---
 
-Mr Cocktails World is a Rails app that allows you to add your favourite cocktail to the list! Including a title, ingredients and a photo.
+---
+**Mr Cocktails World is a Rails app that allows you to add your favourite cocktail to the menu!**
+
+---
+Users can visit the site and upload their own cocktails and then add ingredients and a photo if they wish.
+
+I built this fun little app as part of Le Wagon coding bootcamp. 
+It was one of the first fully functioning Rails apps that I put together by myself.
 
 ## Technologies used:
-1. Ruby on Rails
-2. HTML
-3. CSS/Sass
-4. PostgreSQL
-5. Hosted on Heroku
-6. Image hosting with Cloudinary
+* Ruby on Rails
+* HTML
+* CSS/Sass
+* PostgreSQL
+* Hosted on Heroku
+* Image hosting with Cloudinary

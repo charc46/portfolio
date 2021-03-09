@@ -1,5 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
+import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
+
 import Layout from '../components/Layout'
 import Head from '../components/Head'
 
@@ -34,27 +36,27 @@ const ProjectPage = () => {
   const renderedList = () => {
     return data.allMarkdownRemark.edges.map(edge => {
       return (
-        <li>
+        // <li>
           <div className={projectStyles.projectCard}>
             <div className={projectStyles.cardImage}>
-              <Link to={`/projects/${edge.node.fields.slug}`} className={projectStyles.cardLink}>
-                <img src={edge.node.frontmatter.thumbnail.publicURL} alt={edge.node.frontmatter.title} className={projectStyles.thumbnail}></img>
+              <Link to={`/projects/${edge.node.fields.slug}`}>
+                <img src={edge.node.frontmatter.thumbnail.publicURL} alt={edge.node.frontmatter.title}></img>
               </Link>
             </div>
             <div className={projectStyles.info}>
-              <h2>
+              <h3>
                 <Link to={`/projects/${edge.node.fields.slug}`} className={projectStyles.cardTitle}>
                   {edge.node.frontmatter.title}
                 </Link>
-              </h2>
-              <p>{edge.node.frontmatter.tagline.substring(0, 50)}...</p>
+              </h3>
+              <Link to={`/projects/${edge.node.fields.slug}`} className={projectStyles.button}>Find out more</Link>
               <div className={projectStyles.projectLinks}>
-                <a href={edge.node.frontmatter.url} target='_blank' rel='noreferrer' className={projectStyles.link}>Visit Site</a>
-                <a href={edge.node.frontmatter.github} target='_blank' rel='noreferrer' className={projectStyles.link}>Visit Github Repo</a>
+                <a href={edge.node.frontmatter.url} target='_blank' rel='noreferrer' className={projectStyles.link}><FaExternalLinkAlt /></a>
+                <a href={edge.node.frontmatter.github} target='_blank' rel='noreferrer' className={projectStyles.link}><FaGithub /></a>
               </div>
             </div>
           </div>
-        </li>
+        // </li>
       )
     })
   }
@@ -64,10 +66,8 @@ const ProjectPage = () => {
       <Head title='Projects'/>
       <div className={projectStyles.container}>
         <h2 className={projectStyles.title}>My Projects</h2>
-        <div>
-          <ol className={projectStyles.list}>
-            {renderedList()}
-          </ol>
+        <div className={projectStyles.grid}>
+          {renderedList()}
         </div>
       </div>
     </Layout>

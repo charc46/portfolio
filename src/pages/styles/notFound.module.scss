@@ -1,0 +1,23 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+}
+
+.link {
+  text-decoration: none;
+  width: 250px;
+  margin: 0 auto;
+  color: #333;
+  border-bottom: 1px solid #fff;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    border-bottom: 1px solid #333;
+  }
+}

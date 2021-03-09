@@ -1,6 +1,6 @@
 .container {
   max-width: 900px;
-  margin: 0 auto;
+  margin: 1rem auto;
 }
 
 form {
@@ -36,9 +36,14 @@ form {
 .button {
   border: none;
   transition: all .1s;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #fff;
 
   &:hover {
-    background-color: #ccc;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #333;
     cursor: pointer;
   }
 }

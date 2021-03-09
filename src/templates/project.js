@@ -32,7 +32,7 @@ const Project = (props) => {
       <Head title={props.data.markdownRemark.frontmatter.title} />
       <p><Link to='/projects' className={projectTemplateStyles.link}><FaArrowLeft /> Back to all projects</Link></p>
       <div className={projectTemplateStyles.container}>
-        <h1>{props.data.markdownRemark.frontmatter.title}</h1>
+        <h1 className={projectTemplateStyles.title}>{props.data.markdownRemark.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html}}></div>
       </div>
     </Layout>
