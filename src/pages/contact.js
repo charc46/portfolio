@@ -14,7 +14,7 @@ const contact = () => {
           <input type="name" name="name" placeholder='Your Name' className={contactStyles.name} />
           <input type="subject" name="subject" placeholder='Subject' className={contactStyles.name} />
           <input type="email" name="_replyto" placeholder='Your Email' className={contactStyles.email} />
-          <textarea name='message' rows='5' cols='20' placeholder='Hit me up!' className={contactStyles.message} />
+          <textarea name='message' rows='5' cols='20' placeholder='Talk to me..' className={contactStyles.message} />
           <button className={contactStyles.button}>Send</button>
           <input type="text" name="_gotcha" style={{display:'none'}} />
         </form>

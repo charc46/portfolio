@@ -3,7 +3,7 @@ import { useStaticQuery, graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Head from '../components/Head'
 
-import * as projectStyles from './project.module.scss'
+import * as projectStyles from './styles/project.module.scss'
 
 const ProjectPage = () => {
     const data = useStaticQuery(graphql`
@@ -18,6 +18,7 @@ const ProjectPage = () => {
               title
               github
               url
+              tagline
             }
             html
             excerpt
@@ -35,14 +36,18 @@ const ProjectPage = () => {
       return (
         <li>
           <div className={projectStyles.projectCard}>
-            <Link to={`/projects/${edge.node.fields.slug}`}>
-              <img src={edge.node.frontmatter.thumbnail.publicURL} alt={edge.node.frontmatter.title} className={projectStyles.thumbnail} />
-            </Link>
-            <div className={projectStyles.info}>
-              <Link to={`/projects/${edge.node.fields.slug}`} className={projectStyles.cardTitle}>
-                <h1>{edge.node.frontmatter.title}</h1>
+            <div className={projectStyles.cardImage}>
+              <Link to={`/projects/${edge.node.fields.slug}`} className={projectStyles.cardLink}>
+                <img src={edge.node.frontmatter.thumbnail.publicURL} alt={edge.node.frontmatter.title} className={projectStyles.thumbnail}></img>
               </Link>
-              <p>{edge.node.excerpt}</p>
+            </div>
+            <div className={projectStyles.info}>
+              <h2>
+                <Link to={`/projects/${edge.node.fields.slug}`} className={projectStyles.cardTitle}>
+                  {edge.node.frontmatter.title}
+                </Link>
+              </h2>
+              <p>{edge.node.frontmatter.tagline.substring(0, 50)}...</p>
               <div className={projectStyles.projectLinks}>
                 <a href={edge.node.frontmatter.url} target='_blank' rel='noreferrer' className={projectStyles.link}>Visit Site</a>
                 <a href={edge.node.frontmatter.github} target='_blank' rel='noreferrer' className={projectStyles.link}>Visit Github Repo</a>

@@ -5,8 +5,11 @@
 }
 
 .title {
+  border: 1px solid #fff;
+  padding: 1rem;
+
   a {
-  color: #444;
+  color: #fff;
   text-decoration: none;
   }
 }
@@ -36,7 +39,7 @@
 
 .social-link {
   a {
-  color: #777;
+  color: #fff;
   text-decoration: none;
   font-size: 1.5rem;
   margin-right: 2rem;
@@ -44,19 +47,19 @@
 }
 
 .nav-link {
-  color: #777;
+  color: #fff;
   margin-right: 1rem;
   text-decoration: none;
-  border-bottom: 2px solid white;
+  border-bottom: 1px solid #333;
   padding-bottom: .2rem;
 
   &:hover {
-    color: #444;
+    border-bottom: 1px solid #fff;
   }
 }
 
 .active {
-  color: #333;
-  border-bottom: 2px solid #333;
+  color: #fff;
+  border-bottom: 1px solid #fff;
   padding-bottom: .2rem;
 }

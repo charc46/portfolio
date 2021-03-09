@@ -1,9 +1,15 @@
 .index-container {
   max-width: 900px;
-  margin: 0 auto;
 }
 
 .link {
-  color: #777;
+  color: #fff;
   text-decoration: none;
+  padding-bottom: .1rem;
+  border-bottom: 1px solid #fff;
+
+  &:hover {
+    color: #777;
+    border-bottom: 1px solid #777;
+  }
 }
