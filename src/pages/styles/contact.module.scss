@@ -1,6 +1,10 @@
 .container {
   max-width: 900px;
   margin: 1rem auto;
+
+  @media(max-width: 770px) {
+    width: 100%;
+  }
 }
 
 form {
@@ -8,6 +12,10 @@ form {
   flex-direction: column;
   width: 50%;
   margin: 0 auto;
+
+  @media(max-width: 770px) {
+    width: 90%;
+  }
 }
 
 .title {
