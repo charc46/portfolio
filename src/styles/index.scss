@@ -1,9 +1,10 @@
 /* Reset provided by https://github.com/gatsbyjs/gatsby-starter-blog via MIT license */
-
+@import 'bootstrap/dist/css/bootstrap.min.css';
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 body {
   margin: 0;
