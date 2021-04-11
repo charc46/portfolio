@@ -1,10 +1,9 @@
 .link {
   text-decoration: none;
-  color: #333;
+  color: #fff;
   width: fit-content;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #fff;
   margin: 1rem 0 0 1rem;
 
   svg {
@@ -12,8 +11,8 @@
   }
 
   &:hover {
-    color: #333;
-    border-bottom: 1px solid #333;
+    color: #fff;
+    opacity: .5;
     cursor: pointer;
     text-decoration: none;
   }
@@ -33,21 +32,20 @@ a {
   max-width: 900px;
   padding: 1rem;
   margin: 0 auto;
-  color: #333;
+  color: #fff;
 }
 
 h3{
   a {
     text-decoration: none;
-    color: #333;
-    border-bottom: 1px solid #fff;
+    color: #fff;
   
     &:hover {
-      border-bottom: 1px solid #333;
+      opacity: .5;
     }
   
     &:visited {
-      color: #333;
+      color: #fff;
       text-decoration: none;
     }
   }
