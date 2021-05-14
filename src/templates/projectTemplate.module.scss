@@ -50,3 +50,34 @@ h3{
     }
   }
 }
+
+.project-links {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.1rem;
+}
+
+.project-link {
+  text-decoration: none;
+  color: #fff;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  border: 1px solid #fff;
+  padding: 5px 15px;
+
+  &:hover {
+    color: #fff;
+    opacity: .5;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+}

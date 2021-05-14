@@ -4,7 +4,7 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Head from '../components/Head'
 
-import { FaArrowLeft } from 'react-icons/fa'
+import { FaArrowLeft, FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
 
 import * as projectTemplateStyles from './projectTemplate.module.scss'
 
@@ -21,6 +21,7 @@ export const query = graphql`
       frontmatter {
         title
         url
+        github
       }
       html
     }
@@ -34,6 +35,10 @@ const Project = (props) => {
       <div className={projectTemplateStyles.container}>
         <h1 className={projectTemplateStyles.title}>{props.data.markdownRemark.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html}}></div>
+        <div className={projectTemplateStyles.projectLinks}>
+          <a href={props.data.markdownRemark.frontmatter.url} target='_blank' rel='noreferrer' className={projectTemplateStyles.projectLink}>Site <span><FaExternalLinkAlt /></span></a>
+          <a href={props.data.markdownRemark.frontmatter.github} target='_blank' rel='noreferrer' className={projectTemplateStyles.projectLink}>Github <span><FaGithub /></span></a>
+        </div>
       </div>
     </Layout>
   )
