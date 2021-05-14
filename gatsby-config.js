@@ -11,6 +11,14 @@ module.exports = {
     author: 'Charles Crane'
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-google-gtag',
+      options: {
+        trackingIds: [
+          "G-DH2X8PMT2B"
+        ]
+      }
+    },
     'gatsby-plugin-sass',
     'gatsby-plugin-image',
     'gatsby-image',
