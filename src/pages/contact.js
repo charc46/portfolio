@@ -41,13 +41,16 @@ const Contact = () => {
       <Head title='Contact'/>
       <div className={contactStyles.container}>
         <h2 className={contactStyles.title}>Contact Me</h2>
-        <form name="contact" method="post" data-netlify={true} action='/thanks' onSubmit={() => formSubmit()} >
+        <form name="contact" method="post" data-netlify={true} netlify-honeypot="bot-field" action='/thanks' onSubmit={() => formSubmit()} >
           <input required type="name" name="name" placeholder='Your Name' className={contactStyles.name} onChange={e => setName(e.target.value)} />
           <input required type="email" name="email" placeholder='Your Email' className={contactStyles.email} onChange={e => setEmail(e.target.value)} />
           <input required type="subject" name="subject" placeholder='Subject' className={contactStyles.name} onChange={e => setSubject(e.target.value)} />
           <textarea required name='message' rows='5' cols='20' placeholder='Talk to me..' className={contactStyles.message} onChange={e => setMessage(e.target.value)} />
           <button className={contactStyles.button}>Send</button>
           <input type="hidden" name="form-name" value="contact" />
+          <p class="hidden">
+            <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+          </p>
         </form>
       </div>
     </Layout>
