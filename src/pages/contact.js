@@ -48,9 +48,7 @@ const Contact = () => {
           <textarea required name='message' rows='5' cols='20' placeholder='Talk to me..' className={contactStyles.message} onChange={e => setMessage(e.target.value)} />
           <button className={contactStyles.button}>Send</button>
           <input type="hidden" name="form-name" value="contact" />
-          <p class="hidden">
-            <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
-          </p>
+          <input type='hidden' name="bot-field" placeholder="Don’t fill this out if you’re human:" />
         </form>
       </div>
     </Layout>
